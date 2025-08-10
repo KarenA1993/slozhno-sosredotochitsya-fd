@@ -1,4 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+* {
+  margin: 0;
+  padding: 0;
+}
 :root.theme-dark .bulb {
   visibility: visible;
 }
