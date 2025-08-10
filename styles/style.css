@@ -3,11 +3,6 @@
   visibility: visible;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
 .page {
   background-color: var(--bg-color);
   min-inline-size: 375px;
