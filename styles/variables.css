@@ -14,10 +14,6 @@
 }
 
 @media (width >= 768px) {
-  body {
-    margin: 0;
-    padding: 0;
-  }
   .content {
     display: grid;
   }
@@ -147,12 +143,9 @@
 }
 
 @media (width >= 1024px) {
-  .page {
-    padding: 0px 15px 0px 0px;
-  }
   .header {
     height: auto;
-    padding: 17px 5px 0px 0px;
+    padding: 17px 20px 0px 0px;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
     align-items: center;
@@ -186,7 +179,7 @@
   }
   .decorated-zone::before {
     top: 20px;
-    right: 5px;
+    right: 20px;
   }
   .decorated-zone::after {
     left: 20px;
@@ -206,7 +199,7 @@
     grid-template-columns: 1fr 2fr;
     gap: 10px;
     align-items: start;
-    padding: 51px 0px 0px 7px;
+    padding: 51px 15px 0px 7px;
   }
   .section-header {
     margin: 0;
@@ -226,7 +219,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: min-content;
-    padding: 29px 0px 0px 15px;
+    padding: 29px 15px 0px 15px;
     grid-column: 1;
     gap: 7px;
   }
@@ -252,14 +245,14 @@
     margin-top: 10px;
   }
   .section-wrapper-advice {
-    padding: 1px 0px 0px 12px;
+    padding: 1px 15px 0px 12px;
     margin-top: 61px;
   }
   .section-header-advice {
     padding: 10px 0px 0px 3px;
   }
   .section-wrapper-images {
-    padding: 42px 0px 0px 15px;
+    padding: 42px 15px 0px 15px;
   }
   .title-images {
     margin-top: 30px;
@@ -269,7 +262,7 @@
     height: 100vh;
     max-block-size: 768px;
     margin-top: 76px;
-    padding: 0;
+    padding: 0px 15px 0px 0px;
     place-items: center;
     margin-bottom: 20px;
   }
