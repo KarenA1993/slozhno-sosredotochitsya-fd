@@ -1,10 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  display: grid;
   background-color: var(--bg-color);
   background-attachment: fixed;
-  justify-self: center;
   background-image: var(--background-image);
   background-size: cover;
   background-position: center;
@@ -291,11 +289,21 @@ a:focus {
   }
 
   .header {
-    padding: 19px 20px 41px 0;
+    padding: 16px 20px 41px 0;
     grid-template-columns: 1fr;
     grid-template-rows: min-content 1fr min-content;
     align-content: center;
     row-gap: 30px;
+  }
+
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .decorated-zone::after {
+    left: 20px;
+    bottom: 20px;
   }
 
   .bulb {
@@ -333,7 +341,7 @@ a:focus {
     align-self: center;
     justify-self: end;
     max-inline-size: 364px;
-    margin-bottom: 67px;
+    margin-bottom: 71px;
   }
 
   .content-section {
@@ -341,7 +349,7 @@ a:focus {
     grid-template-columns: 1fr 2fr;
     gap: 20px;
     align-items: start;
-    padding: 34px 10px 0px 11px;
+    padding: 30px 10px 0px 11px;
   }
 
   .section-header {
@@ -455,19 +463,12 @@ a:focus {
   .footer {
     margin-top: 60px;
   }
-
-  .decorated-zone::before {
-    top: 24px;
-    right: 20px;
-  }
-
-  .decorated-zone::after {
-    left: 20px;
-    bottom: 16px;
-  }
 }
 
 @media (width >= 1024px) {
+  .page {
+    align-content: center;
+  }
   .header {
     min-height: 100vh;
     padding: 17px 20px 0 0;
@@ -478,13 +479,13 @@ a:focus {
   }
 
   .bulb {
-    margin: 4px 9px 0px 0px;
+    margin: 0px 9px 0px 0px;
   }
 
   h1 {
     grid-row: 2;
     justify-self: start;
-    padding: 0px 0px 7px 0px;
+    padding: 0px 0px 16px 0px;
     margin: 0px;
     align-self: center;
   }
@@ -503,11 +504,11 @@ a:focus {
     grid-auto-columns: max-content;
     gap: 12px;
     margin: 0;
-    padding: 6px 0px 0px 8px;
+    padding: 3px 0px 0px 8px;
   }
 
   .decorated-zone::before {
-    top: 25px;
+    top: 20px;
     right: 20px;
   }
 
@@ -521,7 +522,7 @@ a:focus {
     align-self: start;
     max-inline-size: 491px;
     padding: 0px;
-    margin: 30px 0px 0px 0px;
+    margin: 25px 0px 0px 0px;
     justify-self: end;
   }
 
@@ -544,8 +545,8 @@ a:focus {
 
   .section {
     display: grid;
-    padding: 3px 0px 0px 6px;
-    margin-top: 8px;
+    padding: 4px 0px 0px 6px;
+    margin-top: 5px;
   }
 
   .section-wrapper {
@@ -572,15 +573,15 @@ a:focus {
   }
 
   .section-multitasking__item-task {
-    padding: 13px 8px 47px 0px;
+    padding: 10px 8px 46px 0px;
   }
 
   .section-multitasking__item-food {
-    padding: 13px 4px 70px 5px;
+    padding: 10px 4px 70px 5px;
   }
 
   .section-multitasking__item-gadgets {
-    padding: 13px 0px 0px 9px;
+    padding: 10px 0px 0px 9px;
   }
 
   .section-wrapper-advice {
@@ -594,7 +595,7 @@ a:focus {
   }
 
   .title-simple {
-    margin-bottom: 7px;
+    margin-bottom: 11px;
   }
 
   .section-wrapper-images {
