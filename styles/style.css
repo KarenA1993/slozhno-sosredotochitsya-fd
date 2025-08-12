@@ -12,12 +12,12 @@
 .header {
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-rows: 1fr min-content min-content;
+  grid-template-rows: min-content min-content 1fr;
   block-size: 100vh;
   min-block-size: 668px;
   padding: 0px 10px 0px 10px;
-  align-content: center;
-  row-gap: 55px;
+  align-content: start;
+  row-gap: 52px;
 }
 
 .bulb {
@@ -172,6 +172,12 @@ h1 {
   padding: 2px 0px 0px 5px;
 }
 
+.section-multitasking {
+  display: grid;
+  padding: 21px 6px 0px 4px;
+  gap: 11px;
+}
+
 .section-wrapper {
   display: grid;
   padding: 1px 5px 0px 5px;
@@ -191,18 +197,6 @@ p {
 article {
   display: grid;
   gap: 11px;
-}
-
-.section-multitasking__item-task {
-  padding: 21px 5px 0px 5px;
-}
-
-.section-multitasking__item-food {
-  padding: 12px 5px 0px 6px;
-}
-
-.section-multitasking__item-gadgets {
-  padding: 11px 5px 0px 5px;
 }
 
 a {
@@ -240,6 +234,7 @@ a:focus {
 
 .title-images {
   margin-top: 37px;
+  margin-bottom: 12px;
 }
 
 .section-images {
@@ -272,52 +267,34 @@ a:focus {
   text-shadow: 2px 2px 0 var(--decor-bg);
   font-weight: 700;
 }
-
-.footer.decorated-zone::before {
-  top: 10px;
-  right: 10px;
-}
-
-.footer.decorated-zone::after {
-  left: 10px;
-  bottom: 11px;
-}
-
 @media (width >= 768px) {
-  .content {
-    display: grid;
-  }
-
   .header {
-    padding: 16px 20px 41px 0;
-    grid-template-columns: 1fr;
+    padding: 10px 20px 46px 0;
     grid-template-rows: min-content 1fr min-content;
-    align-content: center;
     row-gap: 30px;
   }
 
   .decorated-zone::before {
-    top: 20px;
+    top: 15px;
     right: 20px;
   }
 
   .decorated-zone::after {
     left: 20px;
-    bottom: 20px;
+    bottom: 25px;
   }
 
   .bulb {
     margin: 0px;
-    padding: 6px 0px 0px 5px;
+    padding: 6px 0px 0px 2px;
   }
 
   .header__theme-menu {
     grid-column: 2;
-    grid-row: 1;
     justify-self: end;
     align-self: end;
     margin-bottom: 52px;
-    padding-right: 5px;
+    padding-right: 2px;
   }
 
   .header__theme-menu ul {
@@ -332,13 +309,11 @@ a:focus {
 
   h1 {
     font-size: var(--main-header-size-desktop);
-    align-self: center;
     justify-self: start;
     padding: 0px 0px 47px 0px;
   }
 
   .main-text {
-    align-self: center;
     justify-self: end;
     max-inline-size: 364px;
     margin-bottom: 71px;
@@ -347,50 +322,40 @@ a:focus {
   .content-section {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 20px;
-    align-items: start;
-    padding: 30px 10px 0px 11px;
+    gap: 21px;
+    padding: 13px 5px 0px 3px;
   }
 
   .section-header {
-    margin-top: 22.5px;
-    padding: 8px 8px 0px 3px;
+    padding: 2px 0px 0px 12px;
   }
 
-  .section-wrapper-multitasking {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: min-content;
-    padding: 42px 10px 0px 12px;
+  .section-header-attention {
+    padding: 19px 0px 0px 12px;
   }
 
   .section-wrapper {
     padding: 10px 5px 0px 2px;
+    margin-top: 32px;
   }
 
   .section-multitasking {
     grid-row: 2;
     grid-column: 1 / -1;
+    padding: 0px 5px 0px 10px;
   }
 
-  .section-multitasking__item-task {
-    padding: 19px 5px 0px 3px;
-  }
-
-  .section-multitasking__item-food,
-  .section-multitasking__item-gadgets {
-    padding: 12px 5px 0px 3px;
-  }
-
-  .section-wrapper-advice {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: min-content;
-    padding: 41px 11px 0px 12px;
+  .article {
+    padding: 0px 5px 0px 3px;
+    gap: 11px;
   }
 
   .section-advice {
-    padding: 30px 4px 0px 15px;
+    padding: 59px 10px 0px 5px;
+  }
+
+  .section-header-advice {
+    padding: 21px 0px 0px 12px;
   }
 
   .section-wrapper-images {
@@ -398,8 +363,8 @@ a:focus {
   }
 
   .title-images {
-    grid-column: 1 / -1;
     margin-top: 30px;
+    margin-bottom: 20px;
   }
 
   .section-images {
@@ -466,12 +431,9 @@ a:focus {
 }
 
 @media (width >= 1024px) {
-  .page {
-    align-content: center;
-  }
   .header {
     min-height: 100vh;
-    padding: 17px 20px 0 0;
+    padding: 15px 20px 0 0;
     display: grid;
     grid-template-columns: 1fr min-content;
     grid-template-rows: 1fr 1fr 1fr;
@@ -504,7 +466,7 @@ a:focus {
     grid-auto-columns: max-content;
     gap: 12px;
     margin: 0;
-    padding: 3px 0px 0px 8px;
+    padding: 4px 0px 0px 0px;
   }
 
   .decorated-zone::before {
@@ -514,7 +476,7 @@ a:focus {
 
   .decorated-zone::after {
     left: 20px;
-    bottom: 15px;
+    bottom: 20px;
   }
 
   .main-text {
@@ -522,7 +484,7 @@ a:focus {
     align-self: start;
     max-inline-size: 491px;
     padding: 0px;
-    margin: 25px 0px 0px 0px;
+    margin: 26px 0px 0px 0px;
     justify-self: end;
   }
 
@@ -540,66 +502,46 @@ a:focus {
   }
 
   .section-header-concentrate {
-    padding: 51px 0px 0px 9px;
-  }
-
-  .section {
-    display: grid;
-    padding: 4px 0px 0px 6px;
-    margin-top: 5px;
+    padding: 9px 0px 0px 8px;
   }
 
   .section-wrapper {
-    padding: 31px 15px 0px 1px;
+    margin: 0;
+    padding: 9px 0px 0px 3px;
   }
 
-  .section-wrapper-multitasking {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: min-content;
-    padding: 30px 15px 0px 15px;
-    grid-column: 1;
-    gap: 8px;
+  .article {
+    padding: 0px 0px 0px 3px;
   }
 
   .section-header-attention {
     grid-column: 1 / -1;
     max-width: 350px;
-    padding: 44px 0px 0px 0px;
+    padding: 21px 0px 0px 8px;
   }
 
   .section-multitasking {
-    display: contents;
-  }
-
-  .section-multitasking__item-task {
-    padding: 10px 8px 46px 0px;
-  }
-
-  .section-multitasking__item-food {
-    padding: 10px 4px 70px 5px;
-  }
-
-  .section-multitasking__item-gadgets {
-    padding: 10px 0px 0px 9px;
-  }
-
-  .section-wrapper-advice {
-    padding: 1px 15px 0px 12px;
-    margin-top: 61px;
-    gap: 4px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 19px;
+    align-items: start;
+    padding: 11px 0px 0px 5px;
   }
 
   .section-header-advice {
-    padding: 10px 0px 0px 3px;
+    padding: 20px 0px 0px 8px;
+  }
+
+  .section-advice {
+    padding: 20px 0px 0px 6px;
   }
 
   .title-simple {
-    margin-bottom: 11px;
+    margin-bottom: 9px;
   }
 
   .section-wrapper-images {
-    padding: 41px 15px 0px 9px;
+    padding: 42px 15px 0px 15px;
   }
 
   .footer {
